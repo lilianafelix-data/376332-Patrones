@@ -1,0 +1,5 @@
+-- Propósito: medir coordenadas faltantes en panaderías de los 5 estados.
+SELECT count(*) AS panaderias,
+       count(*) FILTER (WHERE latitud IS NULL OR longitud IS NULL) AS sin_coordenadas
+FROM denue_inegi_oficial
+WHERE codigo_act = 311812 AND cve_ent IN (2, 8, 10, 25, 26);
