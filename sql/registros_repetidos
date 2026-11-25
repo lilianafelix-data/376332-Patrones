@@ -1,0 +1,7 @@
+-- Propósito: comprobar si los registros del DENUE están repetidos
+-- (total de filas vs. claves únicas).
+
+SELECT count(*) AS total_filas, count(DISTINCT clee) AS claves_distintas
+FROM denue_inegi_oficial;
+
+--Consulta utilizada para la calidad de los datos.
